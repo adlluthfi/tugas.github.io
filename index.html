@@ -8,15 +8,15 @@
 		@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:opsz@9..40&family=Outfit:wght@300;400;600;700&display=swap");
 
 		:root {
-			--bg-main: #f8f7f2;
-			--bg-secondary: #e9f1f8;
-			--card: rgba(255, 255, 255, 0.88);
-			--text: #16212f;
-			--muted: #455366;
-			--accent: #0f766e;
-			--accent-2: #b45309;
-			--line: rgba(22, 33, 47, 0.1);
-			--shadow: 0 18px 45px rgba(17, 24, 39, 0.12);
+			--bg-main: #0f1419;
+			--bg-secondary: #1a1f2e;
+			--card: rgba(20, 26, 40, 0.8);
+			--text: #e4e6eb;
+			--muted: #a0a6b8;
+			--accent: #00d4ff;
+			--accent-2: #ff6b35;
+			--line: rgba(228, 230, 235, 0.1);
+			--shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
 			--radius: 22px;
 		}
 
@@ -49,7 +49,7 @@
 			height: 380px;
 			left: -90px;
 			top: -110px;
-			background: radial-gradient(circle, rgba(15, 118, 110, 0.2), transparent 65%);
+			background: radial-gradient(circle, rgba(0, 212, 255, 0.1), transparent 65%);
 		}
 
 		body::after {
@@ -57,7 +57,7 @@
 			height: 360px;
 			right: -80px;
 			bottom: -120px;
-			background: radial-gradient(circle, rgba(180, 83, 9, 0.22), transparent 67%);
+			background: radial-gradient(circle, rgba(255, 107, 53, 0.1), transparent 67%);
 		}
 
 		.container {
@@ -73,12 +73,12 @@
 			align-items: center;
 			justify-content: center;
 			text-align: center;
-			background: linear-gradient(130deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.72));
+			background: linear-gradient(130deg, rgba(20, 26, 40, 0.9), rgba(26, 31, 46, 0.8));
 			backdrop-filter: blur(4px);
 			border-radius: var(--radius);
 			box-shadow: var(--shadow);
 			padding: 28px 24px;
-			border: 1px solid rgba(15, 118, 110, 0.18);
+			border: 1px solid var(--line);
 			position: relative;
 			isolation: isolate;
 			animation: revealUp 0.7s ease both;
@@ -89,7 +89,7 @@
 			position: absolute;
 			inset: 0;
 			border-radius: inherit;
-			background: linear-gradient(100deg, rgba(15, 118, 110, 0.08), transparent 35%, rgba(180, 83, 9, 0.08));
+			background: linear-gradient(100deg, rgba(0, 212, 255, 0.05), transparent 35%, rgba(255, 107, 53, 0.05));
 			z-index: -1;
 		}
 
@@ -98,15 +98,15 @@
 			height: 170px;
 			object-fit: cover;
 			border-radius: 999px;
-			border: 5px solid #ecfeff;
-			box-shadow: 0 10px 26px rgba(15, 118, 110, 0.26);
+			border: 5px solid rgba(0, 212, 255, 0.2);
+			box-shadow: 0 10px 26px rgba(0, 212, 255, 0.15);
 		}
 
 		.profile h1 {
 			margin-top: 16px;
 			font-family: "DM Serif Display", serif;
 			font-size: clamp(1.7rem, 2.8vw, 2.4rem);
-			color: #113f4b;
+			color: #00d4ff;
 			letter-spacing: 0.3px;
 		}
 
@@ -138,16 +138,17 @@
 
 		.card:hover {
 			transform: translateY(-5px);
-			box-shadow: 0 22px 42px rgba(17, 24, 39, 0.16);
+			box-shadow: 0 22px 42px rgba(0, 212, 255, 0.2);
+			border-color: rgba(0, 212, 255, 0.3);
 		}
 
 		.card .title {
 			padding: 16px 18px 14px;
 			font-weight: 700;
 			font-size: 1.02rem;
-			color: #0f172a;
+			color: #00d4ff;
 			border-bottom: 1px solid var(--line);
-			background: linear-gradient(90deg, #f9fcff, #f4fffb);
+			background: linear-gradient(90deg, rgba(0, 212, 255, 0.05), rgba(255, 107, 53, 0.05));
 			position: relative;
 		}
 
@@ -185,54 +186,59 @@
 			border-radius: var(--radius);
 			box-shadow: var(--shadow);
 			border: 1px solid var(--line);
-			padding: 20px;
+			padding: 0;
 			transform: translateY(16px);
 			opacity: 0;
 			animation: revealUp 0.6s ease forwards;
 			transition: transform 0.25s ease, box-shadow 0.25s ease;
+			overflow: hidden;
 		}
 
 		.section-box:hover {
 			transform: translateY(-5px);
-			box-shadow: 0 22px 42px rgba(17, 24, 39, 0.16);
+			box-shadow: 0 22px 42px rgba(0, 212, 255, 0.2);
+			border-color: rgba(0, 212, 255, 0.3);
 		}
 
 		.section-box h3 {
-			font-size: 1.05rem;
+			font-size: 1.15rem;
 			font-weight: 700;
-			color: #0f172a;
-			margin-bottom: 16px;
-			padding-bottom: 12px;
+			color: #00d4ff;
+			padding: 18px 20px;
+			background: linear-gradient(90deg, rgba(0, 212, 255, 0.1), rgba(255, 107, 53, 0.05));
 			border-bottom: 2px solid var(--accent);
+			margin: 0;
 		}
 
-		.section-box ul {
-			list-style: none;
-			padding: 0;
+		.section-box .content-wrapper {
+			padding: 20px;
 		}
 
-		.section-box li {
-			color: var(--muted);
-			font-size: 0.9rem;
-			line-height: 1.5;
-			margin-bottom: 8px;
-			padding-left: 18px;
-			position: relative;
+		.section-item {
+			display: grid;
+			grid-template-columns: 140px 1fr;
+			gap: 12px;
+			margin-bottom: 16px;
+			padding-bottom: 16px;
+			border-bottom: 1px solid var(--line);
 		}
 
-		.section-box li::before {
-			content: "•";
-			position: absolute;
-			left: 0;
-			color: var(--accent);
-			font-weight: bold;
-			font-size: 1rem;
+		.section-item:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: none;
 		}
 
-		.section-box .label {
+		.section-label {
 			font-weight: 700;
-			color: #0f172a;
-			display: inline;
+			color: var(--accent);
+			font-size: 0.95rem;
+		}
+
+		.section-value {
+			color: var(--muted);
+			font-size: 0.95rem;
+			line-height: 1.5;
 		}
 
 		.video-wrap {
@@ -254,7 +260,7 @@
 			width: 100%;
 			height: calc(100% - 55px);
 			object-fit: contain;
-			background: #f8fafc;
+			background: rgba(0, 212, 255, 0.05);
 			display: block;
 		}
 
@@ -318,6 +324,11 @@
 
 			.profile {
 				padding: 24px 18px;
+			}
+
+			.section-item {
+				grid-template-columns: 1fr;
+				gap: 6px;
 			}
 		}
 	</style>
@@ -406,27 +417,63 @@
 		<!-- Bagian Structure dan Planning -->
 		<section class="two-column">
 			<article class="section-box">
-				<h3>Structure</h3>
-				<ul>
-					<li><span class="label">Intro:</span> Grab attention, state problem</li>
-					<li><span class="label">Problem:</span> High-tech security vs human error</li>
-					<li><span class="label">Why:</span> Logical systems vs emotional minds</li>
-					<li><span class="label">Mechanics:</span> The 5 psychological hooks</li>
-					<li><span class="label">Lifecycle:</span> Recon-Hook-Exploit-Exit</li>
-					<li><span class="label">Threats:</span> Phishing, Vishing, Pretexting, Baiting</li>
-					<li><span class="label">Cure:</span> Zero Trust strategies</li>
-					<li><span class="label">Outro:</span> Empowering closing</li>
-				</ul>
+				<h3>📋 Structure</h3>
+				<div class="content-wrapper">
+					<div class="section-item">
+						<div class="section-label">Intro</div>
+						<div class="section-value">Grab attention, state the problem, outline the talk</div>
+					</div>
+					<div class="section-item">
+						<div class="section-label">The Problem</div>
+						<div class="section-value">High-tech security systems vs human error vulnerability</div>
+					</div>
+					<div class="section-item">
+						<div class="section-label">The Why</div>
+						<div class="section-value">Logical systems vs emotional and unpredictable human minds</div>
+					</div>
+					<div class="section-item">
+						<div class="section-label">Mechanics</div>
+						<div class="section-value">Explain the 5 psychological triggers that hook targets</div>
+					</div>
+					<div class="section-item">
+						<div class="section-label">Lifecycle</div>
+						<div class="section-value">Walk through Recon → Hook → Exploit → Exit process</div>
+					</div>
+					<div class="section-item">
+						<div class="section-label">Threats</div>
+						<div class="section-value">Cover Phishing, Vishing, Pretexting, and Baiting attacks</div>
+					</div>
+					<div class="section-item">
+						<div class="section-label">The Cure</div>
+						<div class="section-value">Present actionable "Zero Trust" strategies & awareness</div>
+					</div>
+					<div class="section-item">
+						<div class="section-label">Outro</div>
+						<div class="section-value">Empower audience with key takeaways and call to action</div>
+					</div>
+				</div>
 			</article>
 
 			<article class="section-box">
-				<h3>Planning</h3>
-				<ul>
-					<li><span class="label">Title:</span> Hack Mind - Why Humans Are Cybersecurity's Zero-Day</li>
-					<li><span class="label">Purpose:</span> Educate on human vulnerabilities in cyberattacks</li>
-					<li><span class="label">Problem:</span> Human nature is unpatchable</li>
-					<li><span class="label">Psychology:</span> Urgency, Authority, Curiosity, Greed, Trust</li>
-				</ul>
+				<h3>🎯 Planning</h3>
+				<div class="content-wrapper">
+					<div class="section-item">
+						<div class="section-label">Title</div>
+						<div class="section-value">Hack Mind: Why Humans Are Cybersecurity's Zero-Day Exploit</div>
+					</div>
+					<div class="section-item">
+						<div class="section-label">Purpose</div>
+						<div class="section-value">Educate audience on why humans are primary targets for modern cyberattacks</div>
+					</div>
+					<div class="section-item">
+						<div class="section-label">Core Problem</div>
+						<div class="section-value">Unlike software, human nature (fear, curiosity, trust) is an "unpatchable" vulnerability</div>
+					</div>
+					<div class="section-item">
+						<div class="section-label">5 Triggers</div>
+						<div class="section-value">Urgency • Authority • Curiosity • Greed • Trust</div>
+					</div>
+				</div>
 			</article>
 		</section>
 	</div>
