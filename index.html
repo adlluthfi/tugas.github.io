@@ -173,6 +173,62 @@
 			margin-top: 12px;
 		}
 
+		.two-column {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 24px;
+		}
+
+		.section-box {
+			background: var(--card);
+			backdrop-filter: blur(3px);
+			border-radius: var(--radius);
+			box-shadow: var(--shadow);
+			border: 1px solid var(--line);
+			padding: 18px 20px;
+			transform: translateY(16px);
+			opacity: 0;
+			animation: revealUp 0.6s ease forwards;
+			transition: transform 0.25s ease, box-shadow 0.25s ease;
+		}
+
+		.section-box:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 22px 42px rgba(17, 24, 39, 0.16);
+		}
+
+		.section-box h3 {
+			font-size: 1.1rem;
+			font-weight: 700;
+			color: #0f172a;
+			margin-bottom: 14px;
+			padding-bottom: 10px;
+			border-bottom: 2px solid var(--accent);
+		}
+
+		.section-box ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		.section-box li {
+			color: var(--muted);
+			font-size: 0.95rem;
+			line-height: 1.6;
+			margin-bottom: 10px;
+			padding-left: 20px;
+			position: relative;
+		}
+
+		.section-box li::before {
+			content: "•";
+			position: absolute;
+			left: 0;
+			color: var(--accent);
+			font-weight: bold;
+			font-size: 1.2rem;
+		}
+
 		.video-wrap {
 			position: relative;
 			width: 100%;
@@ -217,6 +273,14 @@
 			animation-delay: 0.34s;
 		}
 
+		.section-box:nth-child(1) {
+			animation-delay: 0.42s;
+		}
+
+		.section-box:nth-child(2) {
+			animation-delay: 0.5s;
+		}
+
 		@keyframes revealUp {
 			from {
 				opacity: 0;
@@ -231,6 +295,10 @@
 
 		@media (max-width: 900px) {
 			.grid {
+				grid-template-columns: 1fr;
+			}
+
+			.two-column {
 				grid-template-columns: 1fr;
 			}
 
@@ -306,7 +374,7 @@
 					</p>
 					<p>
 							People-oriented listeners are people who focus more on relationships and emotions when they listen to someone speaking.
-					They usually care about the speaker’s feelings and enjoy personal stories or real-life experiences.
+					They usually care about the speaker's feelings and enjoy personal stories or real-life experiences.
 					For example, when someone gives a presentation, people-oriented listeners prefer stories about people rather than just data or statistics.
 					So, to engage these listeners, a presenter can share personal stories, experiences, or examples that involve people.
 						</p>
@@ -314,7 +382,7 @@
 					<strong>Include Q&A Sessions</strong>
 						</p>
 					<p>
-						During a presentation, the audience’s attention span is usually limited. Because of that, it is important to make the presentation more interactive.
+						During a presentation, the audience's attention span is usually limited. Because of that, it is important to make the presentation more interactive.
 					One way to do this is by including Question and Answer sessions.
 					Q&A sessions allow the audience to ask questions, share their opinions, and become more involved in the presentation.
 					This helps the audience stay focused and understand the topic better.
@@ -326,6 +394,30 @@
 					<strong>152023103 Muhammad Roji Taufik</strong>
 					</p>
 				</div>
+			</article>
+		</section>
+
+		<!-- Bagian Structure dan Planning -->
+		<section class="two-column">
+			<article class="section-box">
+				<h3>Structure</h3>
+				<ul>
+					<li>Introduction</li>
+					<li>Main Content</li>
+					<li>Conclusion</li>
+					<li>Q&A Session</li>
+				</ul>
+			</article>
+
+			<article class="section-box">
+				<h3>Planning</h3>
+				<ul>
+					<li>Define Objectives</li>
+					<li>Research Content</li>
+					<li>Organize Information</li>
+					<li>Create Visuals</li>
+					<li>Practice Presentation</li>
+				</ul>
 			</article>
 		</section>
 	</div>
